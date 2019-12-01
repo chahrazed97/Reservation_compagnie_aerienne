@@ -1,0 +1,526 @@
+
+<html lang="en">
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Acceuil</title>
+    <link rel=stylesheet href="styl.css">
+</head>
+
+<body>
+   
+    
+    
+    
+    
+    
+    <!-- navbar-->
+     
+     <nav class="right" id="nav">
+     <div class="nav-wrapper"  >
+      <a href="#">Acceuil</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+     <li><a href="#">Mes reservation</a></li>
+          <li><a href="hotel/vehicule.html">Hôtel&Vehicules</a></li>
+          
+          <li><a href="aide.html">Informations</a></li>
+      </ul>
+    </div>
+  </nav>   
+           
+           <!-- tabs reservation et enregistrement-->
+     <section class="milieu">
+    <div class="container tab1">
+        
+        <ul id="tabs-swipe-demo" class="tabs center">
+    <li class="tab col s3 "><a href="#reserver" class=" btn active">Resérver</a></li>
+    <li class="tab col s3 "><a href="#enregistrer">S'enregistrer</a></li>
+  </ul>
+  <div id="reserver" class="col s12 white">
+        
+         <!--formulaire multidestination que je v cacher-->
+      <form style="display: none" id="Multidestination">  
+          <div class="row">
+         <div class="col s4">
+      <div class="row">
+        <div class="input-field col s4">
+          <i class="material-icons prefix">flight_takeoff</i>
+          <input type="text" id="autocomplete11" class="autocomplete" name="aeroport_aller">
+          <label for="autocomplete-input">Aéroport_Aller</label>
+        </div>
+      </div>
+    </div>
+               <div class="col s12 m6 l4">
+      <div class="row">
+        <div class="input-field col s12 m6 l4">
+          <i class="material-icons prefix">flight_takeoff</i>
+          <input type="text" id="autocomplete12" class="autocomplete">
+          <label for="autocomplete-input">Aéroport_Retour</label>
+        </div>
+      </div>
+    </div> 
+               <div class="col s4">
+      <div class="row">
+        <div class="input-field col s12 m6 l4">
+          <i class="material-icons prefix">calendar_today</i>
+          <input type="date" id="date">
+          <label for="date_aller">Date_aller</label>
+        </div>
+      </div>
+    </div>  
+          </div>
+      
+        <div class="row">
+            <div id="volmultiple">
+         <div class="col s3">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">flight_takeoff</i>
+          <input type="text" id="autocomplete11" class="autocomplete">
+          <label for="autocomplete-input">Aéroport_Aller</label>
+        </div>
+      </div>
+    </div>
+               <div class="col s3">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">flight_takeoff</i>
+          <input type="text" id="autocomplete12" class="autocomplete">
+          <label for="autocomplete-input">Aéroport_Retour</label>
+        </div>
+      </div>
+    </div> 
+               <div class="col s4 dta">
+      <div class="row">
+        <div class="input-field col s11">
+          <i class="material-icons prefix">calendar_today</i>
+          <input type="date" id="date">
+          <label for="date_aller">Date_aller</label>
+        </div>
+      </div>
+    </div>  
+            </div>
+            <a class="btn-floating btn-large waves-effect waves-light blue" onclick="document.getElementById('volmultiple').style.display='block'"><i class="material-icons">add</i></a>
+             <a class="btn-floating btn-large waves-effect waves-light red" onclick="document.getElementById('volmultiple').style.display='none'"><i class="material-icons">clear</i></a>
+            
+          </div>
+      <div class="row">
+            <div class="col s4">
+    <div class="input-field col s12">
+    <select multiple>
+            
+     <option value="" disabled>nombre_passagers</option>
+      <optgroup label="Adulte">
+        <option value="1a">1A</option>
+        <option value="2a">2A</option>
+      </optgroup>
+      <optgroup label="Enfant">
+        <option value="1e">1E</option>
+        <option value="2e">2E</option>
+      </optgroup>
+         <optgroup label="Bébé">
+        <option value="1e">1b</option>
+        <option value="2e">2b</option>
+      </optgroup>
+    </select>
+    <label>Nombres de Passagers</label>   
+    </div> 
+    </div>
+           <div class="col s4">
+    <div class="input-field col s12">
+    <select multiple>
+          <option value="" disabled>Choisissez une classe</option>
+      <optgroup label="Economique">
+        <option value="EconomiqueA">EconomiqueA</option>
+        <option value="EconomiqueB">EconomiqueB</option>
+      </optgroup>
+      <optgroup label="premiére classe ">
+        <option value="premium">PremiumA</option>
+        <option value="premiumB">PremiumB</option>
+      </optgroup>
+    </select>
+    <label>Classes</label>   
+    </div> </div> 
+          <div class="col s4"><a class="btn submit">Rechercher</a></div>
+          </div>
+          
+          
+          
+      </form>
+      
+      <!--formulaire aller-->
+      
+      <form >
+             <!--radio button--> 
+            <div class="row">
+                <div class="col">
+         <p>
+      <label>
+        <input name="group1" type="radio" checked onclick="document.getElementById('date_retour').style.display='none';apparaitresimple();cachermulti()"  />
+        <span>Aller_simple</span>
+      </label>
+    </p>
+                </div>
+                      <div class="col">
+         <p>
+      <label>
+        <input name="group1" type="radio"  onclick="document.getElementById('date_retour').style.display='block';apparaitresimple();cachermulti()" />
+        <span>Aller_Retour</span>
+      </label>
+    </p>
+                </div>
+                
+                
+              
+        <div class="col">
+         <p>
+      <label>
+        <input name="group1" type="radio" onclick="apparaitremulti();cachersimple()" />
+        <span>Multi_destinations</span>
+      </label>
+    </p>
+                </div>
+                
+                
+                
+                
+            </div>
+          <div id="allersimple">  <!--input-->
+      <div class="row">
+    <div class="col">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">flight_takeoff</i>
+          <input type="text" id="autocomplete1" class="autocomplete">
+          <label for="autocomplete-input">Aéroport_Aller</label>
+        </div>
+      </div>
+    </div>
+            <div class="col">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">flight_land</i>
+          <input type="text" id="autocomplete2" class="autocomplete">
+          <label for="autocomplete-input">Aéroport_Arrivé</label>
+        </div>
+      </div>
+    </div> 
+            
+           <div class="col">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">calendar_today</i>
+          <input type="date" id="date">
+          <label for="date_aller">Date_aller</label>
+        </div>
+      </div>
+    </div>   
+            
+     </div>
+            <!--on cache la date de retour en aller simple-->
+      <div class="row" id="date_retour" >
+              <div class="col s4">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">calendar_today</i>
+          <input type="date" >
+          <label for="date_retour">Date_Retour</label>
+        </div>
+      </div>
+    </div>
+            
+    </div>
+      
+      <div class="row">
+    <div class="col">
+    <div class="input-field col s12">
+    <select multiple>
+            
+     <option value="" disabled>nombre_passagers</option>
+      <optgroup label="Adulte">
+        <option value="1a">1A</option>
+        <option value="2a">2A</option>
+      </optgroup>
+      <optgroup label="Enfant">
+        <option value="1e">1E</option>
+        <option value="2e">2E</option>
+      </optgroup>
+         <optgroup label="Bébé">
+        <option value="1e">1b</option>
+        <option value="2e">2b</option>
+      </optgroup>
+    </select>
+    <label>Nombres de Passagers</label>   
+    </div> 
+    </div>
+          
+        <div class="col">
+    <div class="input-field col s12">
+    <select multiple>
+          <option value="" disabled>Choisissez une classe</option>
+      <optgroup label="Economique">
+        <option value="EconomiqueA">EconomiqueA</option>
+        <option value="EconomiqueB">EconomiqueB</option>
+      </optgroup>
+      <optgroup label="premiére classe ">
+        <option value="premium">PremiumA</option>
+        <option value="premiumB">PremiumB</option>
+      </optgroup>
+    </select>
+    <label>Classes</label>   
+    </div> </div> 
+          
+    <div class="col s4"><a class="btn submit">Rechercher</a></div>
+        </div>
+          </div>
+      </form>
+        
+        
+        </div>
+        <!--formulaire d'enregistrement-->
+  <div id="enregistrer" class="col s12 white">
+      <form id="enregistrement">
+          <div class="col s6">
+      <div class="row">
+        <div class="input-field col s6">
+          <input type="text" id="nom" class="nom">
+          <label for="nom">veuillez inserer votre nom de famille</label>
+        </div>
+      </div>
+    </div>
+      <div class="row">
+    <div class="col s6">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">visibility_off</i>
+          <input type="password" id="code_reservation" class="code_reservation">
+          <label for="code_reservation">veuillez inséerer votre code de reservation</label>
+        </div>
+      </div>
+    </div>
+           <div class="col"><a class="btn submit">S'enregistrer</a></div>
+          </div>
+      
+      
+      </form>
+        </div>
+
+        
+        </div> </section>
+    
+    
+    
+    <!---carte offres-->
+    <h1 class="center">Nos offres</h1>
+    <div class="container">
+    <div class="row">
+ <div class="card col s4">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="avionfood.jpg" id="imgcarte">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Bonne Nourriture<i class="material-icons right">more_vert</i></span>
+      <p><a href="#"></a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Nourriture<i class="material-icons right">close</i></span>
+      <p>offre nourriture.</p>
+    
+     </div>
+        </div>
+    
+        <div class="card col s4">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="securitemen.jpg" id="imgcarte">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Sécurité<i class="material-icons right">more_vert</i></span>
+      <p><a href="#"></a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Notre equipe de sécurité<i class="material-icons right">close</i></span>
+      <p>offre Sécurité.</p>
+    
+     </div>
+        </div>
+        
+        
+        
+        
+        
+         <div class="card col s4">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="confort.jpg" id="imgcarte">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Avions confortable<i class="material-icons right">more_vert</i></span>
+      <p><a href="#"></a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Confort<i class="material-icons right">close</i></span>
+      <p>Confort.</p>
+    
+     </div>
+        </div>
+        </div>
+         </div>
+    
+    <!--destination-->
+    
+    <div class="container">
+    <h1 class="center">Nos Déstinations</h1>
+    <div class="row">
+    <div class=" card col s4">
+        <div class="card-image">
+          <img src="eureup.jpg" id="imgcarte">
+        </div>
+        <div class="card-content">
+        </div>
+        <div class="card-action">
+          <a href="#">Eureup</a>
+        </div>
+      </div>
+       <div class=" card col s4">
+        <div class="card-image" >
+          <img src="pasie.webp" id="imgcarte">
+        </div>
+        <div class="card-content">
+        </div>
+        <div class="card-action">
+          <a href="#">Asie</a>
+        </div>
+      </div> 
+
+        <div class=" card col s4">
+        <div class="card-image">
+          <img src="america.jpg" id="imgcarte">
+        </div>
+        <div class="card-content">
+        </div>
+        <div class="card-action">
+          <a href="#">Amérique du sud</a>
+        </div>
+        </div>        
+    </div>
+    </div>
+    <!--preparer votre voyage-->
+      <h1 class="center">Préparer votre voyage </h1>
+    <div class="container">
+    <div class="row">
+ <div class="card col s4">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="avantv.jpg" id="imgcarte">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Avant-Voyage<i class="material-icons right">more_vert</i></span>
+      <p><a href="#"></a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Avant le  voyage<i class="material-icons right">close</i></span>
+      <p>Texte a ecrire avant le voyage</p>
+    
+     </div>
+        </div>
+    
+        <div class="card col s4">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="abord.jpg" id="imgcarte">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">A bord<i class="material-icons right">more_vert</i></span>
+      <p><a href="#"></a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">A bord<i class="material-icons right">close</i></span>
+      <p>texte a ecrire pou a bord.</p>
+    
+     </div>
+        </div>
+        
+        
+         <div class="card col s4">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="apresv.jpg" id="imgcarte">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Apres le voyage <i class="material-icons right">more_vert</i></span>
+      <p><a href="#"></a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">A l'arrivée<i class="material-icons right">close</i></span>
+      <p>texte a écrire a l'arrivé.</p>
+    
+     </div>
+        </div>
+        </div>
+         </div>
+    
+    
+     <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">AirDorado</h5>
+                <p class="grey-text text-lighten-4">Un voyage de réve.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2020 Tous les Droits sont Résérvés
+            <a class="grey-text text-lighten-4 right" href="#!">NewsLetters</a>
+            </div>
+          </div>
+     </footer>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
+       <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script>
+    $(document).ready(function(){
+    $('.tabs').tabs();
+         $('select').formSelect();
+          $('input.autocomplete').autocomplete
+        
+  });
+          function apparaitremulti(){
+              var show=document.getElementById('Multidestination');
+              show.style.display="block";
+              
+          }
+           function apparaitresimple(){
+              var show=document.getElementById('allersimple');
+              show.style.display="block";
+              
+          }
+          function cachersimple(){
+              var cacher=document.getElementById('allersimple');
+              cacher.style.display="none";
+          }
+           function cachermulti(){
+              var cacher=document.getElementById('Multidestination');
+              cacher.style.display="none";
+          }
+    </script>   
+  
+   
+</body>
+</html>
