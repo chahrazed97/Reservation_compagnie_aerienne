@@ -1,0 +1,789 @@
+<html lang="en">
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Acceuil</title>
+    <link rel=stylesheet href="./css/styl.css">
+</head>
+
+<body>
+
+
+
+
+
+
+    <!-- navbar-->
+    <div class="logo">
+        <div class="brand">
+            <a href="#!">Logo</a>
+        </div>
+    </div>
+
+        <div class="menu">
+            <section class="navigation">
+                <div class="nav-container">
+
+                    <div>
+                        <div class="nav">
+                            <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                            <ul class="nav-list">
+                                <li class="menubar">
+                                    <a href="#!" style="padding-left:0 ;"><span><i style="font-size: 1em;"><i class="fas fa-home"></i></span> Acceuil</a>
+                                </li>
+                                <li class="menubar">
+                                    <a href="#!"><span style="font-size: 1.1em;"><i class="fas fa-plane-departure"></i></span> Mes Reservation</a>
+                                </li>
+
+                                <li class="menubar">
+                                    <a href="#!"><span style="font-size: 1.1em;"><i class="fas fa-bed"></i></span> Hôtel & Véhicule</a>
+                                </li>
+                                <li>
+                                    <a href="#!"><span style="font-size: 1.1em;"><i class="fas fa-info-circle"></i></span> Informations<span style="padding:6px 0 0 6px"> <i class="fas fa-chevron-down" ></i></span></a>
+                                    <ul class="nav-dropdown">
+                                        <li>
+                                            <a href="#!">Informations 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#!">Informations 2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#!">Informations 3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#!">Informations 4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#!">Informations 5</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- tabs reservation et enregistrement-->
+        <section class="milieu">
+            <div class=" container tab1 col s12 m8 l6">
+
+                <ul id="tabs-swipe-demo" class=" tabs center">
+                    <li class="tab col s3 "><a href="#reserver" class="active"><strong style="color: black">Resérver</strong></a></li>
+                    <li class="tab col s3 "><a href="#enregistrer"><strong style="color: black">S'enregistrer</strong></a></li>
+                </ul>
+                <div id="reserver" class="col s12 white">
+
+
+                    <!--formulaire aller eller-retour-->
+
+                    <form action="../liste_vol_aller.php" method="post">
+                        <!--radio button-->
+                        <div class="row">
+                            <div class="col">
+                                <p>
+                                    <label>
+        <input name="group1" type="radio" checked onclick="document.getElementById('date_retour').style.display='none';apparaitresimple();cachermulti()"  />
+        <span>Aller_simple</span>
+      </label>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p>
+                                    <label>
+        <input name="group1" type="radio"  onclick="document.getElementById('date_retour').style.display='block';apparaitresimple();cachermulti()" />
+        <span>Aller_Retour</span>
+      </label>
+                                </p>
+                            </div>
+
+
+
+                            <div class="col">
+                                <p>
+                                    <label>
+        <input name="group1" type="radio" onclick="apparaitremulti();cachersimple()" />
+        <span>Multi_destinations</span>
+      </label>
+                                </p>
+                            </div>
+
+
+
+
+                        </div>
+                        <div id="allersimple">
+                            <!--input-->
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons prefix">flight_takeoff</i>
+                                            <input type="text" id="autocomplete1" class="autocomplete" name="aeroport_aller">
+                                            <label for="autocomplete-input">Aéroport_Aller</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons prefix">flight_land</i>
+                                            <input type="text" id="autocomplete2" class="autocomplete" name="aeroport_arrive">
+                                            <label for="autocomplete-input">Aéroport_Arrivé</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons prefix">calendar_today</i>
+                                            <input type="date" id="date" name="date_aller">
+                                            <label for="date_aller">Date_aller</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--on cache la date de retour en aller simple-->
+                            <div class="row" id="date_retour">
+                                <div class="col s4">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons prefix">calendar_today</i>
+                                            <input type="date" name="date_retour">
+                                            <label for="date_retour">Date_Retour</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <h6 class="center">Nombre de passagers</h6>
+                            <div class="row passager" style="background-color: aquamarine;">
+
+                                <div class="col s12 m6 l4">
+                                    <div class="input-field col s12 ">
+                                        <input type="number" id="adulte1" max="9" min="0" name="adulte">
+                                        <label>Nombre_adulte</label>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6 l4">
+                                    <div class="input-field col s12 ">
+                                        <input type="number" id="enfant1" max="9" min="0" name="enfant">
+                                        <label>Nombre_enfants</label>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6 l4">
+                                    <div class="input-field col s12 ">
+                                        <input type="number" id="bebe1" max="9" min=0 name="bebe">
+                                        <label>Nombre_bébé</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row classes">
+                                <div class="col s12 m6 l4">
+                                    <div class="input-field col s12">
+                                        <select multiple name="classe">
+          <option value="" disabled>Choisissez une classe</option>
+        <option value="premiere">Premiére_classe</option>
+        <option value="economique">Economique</option>
+     <option value="affaire">Affaires</option>
+    </select>
+                                        <label>Classes</label>
+                                    </div>
+                                </div>
+
+                                <div class="col s4 center"><button class="btn submit">Rechercher</button></div>
+                            </div>
+                        </div>
+                    </form>
+                    <!--formulaire multidestination que je v cacher-->
+                    <form style="display: none" id="Multidestination">
+                        <div class="row">
+                            <div class="col s12 m6 l3">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">flight_takeoff</i>
+                                        <input type="text" id="autocomplete11" class="autocomplete">
+                                        <label for="autocomplete-input">Aéroport_Aller</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l3">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">flight_land</i>
+                                        <input type="text" id="autocomplete12" class="autocomplete">
+                                        <label for="autocomplete-input">Aéroport_Retour</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l4">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">calendar_today</i>
+                                        <input type="date" id="date">
+                                        <label for="date_aller">Date_aller</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col s12 m4 l1"> <a class="btn-floating btn-small waves-effect waves-light blue" onclick="document.getElementById('vol2').style.display='block'"><i class="material-icons">add</i></a></div>
+                            
+                        </div>
+
+                        <div class="row" id="vol2" style="display: none;">
+                            <div class="col s12 m6 l3">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">flight_takeoff</i>
+                                        <input type="text" id="autocomplete11" class="autocomplete">
+                                        <label for="autocomplete-input">Aéroport_Aller</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l3">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">flight_land</i>
+                                        <input type="text" id="autocomplete12" class="autocomplete">
+                                        <label for="autocomplete-input">Aéroport_Retour</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l4">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">calendar_today</i>
+                                        <input type="date" id="date">
+                                        <label for="date_aller">Date_aller</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col s12 m4 l1"> <a class="btn-floating btn-small waves-effect waves-light blue" onclick="document.getElementById('vol3').style.display='block'"><i class="material-icons">add</i></a></div>
+                            <div class=" col s12 m4 l1"> <a class="btn-floating btn-small waves-effect waves-light red" onclick="document.getElementById('vol2').style.display='none'"><i class="material-icons">clear</i></a> </div>
+
+                        </div>
+
+                        <div class="row" style="display: none; " id="vol3">
+                            <div id="volmultiple">
+                                <div class="col s12 m6 l3">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons prefix">flight_takeoff</i>
+                                            <input type="text" id="autocomplete11" class="autocomplete">
+                                            <label for="autocomplete-input">Aéroport_Aller</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6 l3">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons prefix">flight_land</i>
+                                            <input type="text" id="autocomplete12" class="autocomplete">
+                                            <label for="autocomplete-input">Aéroport_Retour</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6 l4  dta">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons prefix">calendar_today</i>
+                                            <input type="date" id="date">
+                                            <label for="date_aller">Date_aller</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col s12 m4 l1"> <a class="btn-floating btn-small waves-effect waves-light blue" onclick="document.getElementById('vol4').style.display='block'"><i class="material-icons">add</i></a></div>
+                            <div class=" col s12 m4 l1"> <a class="btn-floating btn-small waves-effect waves-light red" onclick="document.getElementById('vol3').style.display='none'"><i class="material-icons">clear</i></a> </div>
+                        </div>
+                        <div class="row" style="display: none; " id="vol4">
+                            <div id="volmultiple">
+                                <div class="col s12 m6 l3">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons prefix">flight_takeoff</i>
+                                            <input type="text" id="autocomplete11" class="autocomplete">
+                                            <label for="autocomplete-input">Aéroport_Aller</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6 l3">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons prefix">flight_land</i>
+                                            <input type="text" id="autocomplete12" class="autocomplete">
+                                            <label for="autocomplete-input">Aéroport_Retour</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6 l4  dta">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons prefix">calendar_today</i>
+                                            <input type="date" id="date">
+                                            <label for="date_aller">Date_aller</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col s12 m4 l1"> <a class="btn-floating btn-small waves-effect waves-light blue" onclick="document.getElementById('vol5').style.display='block'"><i class="material-icons">add</i></a></div>
+                            <div class=" col s12 m4 l1"> <a class="btn-floating btn-small waves-effect waves-light red" onclick="document.getElementById('vol4').style.display='none'"><i class="material-icons">clear</i></a> </div>
+                        </div>
+                        <div class="row" style="display: none; " id="vol5">
+                            <div id="volmultiple">
+                                <div class="col s12 m6 l3">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons prefix">flight_takeoff</i>
+                                            <input type="text" id="autocomplete11" class="autocomplete">
+                                            <label for="autocomplete-input">Aéroport_Aller</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6 l3">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons prefix">flight_land</i>
+                                            <input type="text" id="autocomplete12" class="autocomplete">
+                                            <label for="autocomplete-input">Aéroport_Retour</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6 l4  dta">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons prefix">calendar_today</i>
+                                            <input type="date" id="date">
+                                            <label for="date_aller">Date_aller</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class=" col s12 m4 l1"> <a class="btn-floating btn-small waves-effect waves-light red" onclick="document.getElementById('vol5').style.display='none'"><i class="material-icons">clear</i></a> </div>
+                        </div>
+
+                        <div class="row">
+                            <h6 class="center">Nombre de passagers</h6>
+                        </div>
+                        <div class="row passager" style="background-color: aquamarine;">
+
+                            <div class="col s12 m6 l4">
+                                <div class="input-field col s12 ">
+                                    <input type="number" id="adulte" max="9" min="0">
+                                    <label>Nombre_adulte</label>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l4">
+                                <div class="input-field col s12 ">
+                                    <input type="number" id="enfant" max="9" min="0">
+                                    <label>Nombre_enfants</label>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l4">
+                                <div class="input-field col s12 ">
+                                    <input type="number" id="bebe" max="9" min="0">
+                                    <label>Nombre_bébé</label>
+                                </div>
+                            </div>
+                        </div>
+
+                                <div class="row classes">
+                                <div class="col s12 m6 l4">
+                                    <div class="input-field col s12">
+                                        <select multiple>
+          <option value="" disabled>Choisissez une classe</option>
+        <option value="premiere">Premiére_classe</option>
+        <option value="economique">Economique</option>
+     <option value="affaire">Affaires</option>
+    </select>
+                                        <label>Classes</label>
+                                    </div>
+                                </div>
+
+                                <div class="col s4 center"><a class="btn submit">Rechercher</a></div>
+                            </div>
+                    </form>
+                </div>
+     
+            
+                
+                <!--formulaire d'enregistrement-->
+                <div id="enregistrer" class="col s12 white">
+                    <form id="enregistrement">
+
+                        <div class="row">
+                            <div class="col s12 m6 l4">
+                            <div class="input-field col s12">
+                                <input type="text" id="nom" class="nom">
+                                <label for="nom">veuillez inserer votre nom de famille</label>
+                            </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m6 l5 ">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">visibility_off</i>
+                                        <input type="password" id="code_reservation" class="code_reservation">
+                                        <label for="code_reservation">veuillez insérer votre code de reservation</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l3"><a class="btn submit">S'enregistrer</a></div>
+                        </div>
+                    </form>
+                </div></div>
+           </section>
+    
+        <!---carte offres-->
+        <h1 class="center">Nos offres</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="image/avionfood.jpg" id="imgcarte">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Bonne Nourriture<i class="material-icons right">more_vert</i></span>
+                            <p>
+                                <a href="#"></a>
+                            </p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Nourriture<i class="material-icons right">close</i></span>
+                            <p>offre nourriture.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card ">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="image/securitemen.jpg" id="imgcarte">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Sécurité<i class="material-icons right">more_vert</i></span>
+                            <p>
+                                <a href="#"></a>
+                            </p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Notre equipe de sécurité<i class="material-icons right">close</i></span>
+                            <p>offre Sécurité.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="image/confort.jpg" id="imgcarte">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Avions confortable<i class="material-icons right">more_vert</i></span>
+                            <p>
+                                <a href="#"></a>
+                            </p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Confort<i class="material-icons right">close</i></span>
+                            <p>Confort.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--destination-->
+
+        <div class="container">
+            <h1 class="center">Nos Déstinations</h1>
+            <div class="row">
+                <div class="col s12 m6 l4">
+                    <div class=" card ">
+                        <div class="card-image">
+                            <img src="image/eureup.jpg" id="imgcarte">
+                        </div>
+                        <div class="card-content">
+                        </div>
+                        <div class="card-action">
+                            <a href="#">Eureup</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class=" card">
+                        <div class="card-image">
+                            <img src="image/america.jpg" id="imgcarte">
+                        </div>
+                        <div class="card-content">
+                        </div>
+                        <div class="card-action">
+                            <a href="#">Asie</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class=" card ">
+                        <div class="card-image">
+                            <img src="image/america.jpg" id="imgcarte">
+                        </div>
+                        <div class="card-content">
+                        </div>
+                        <div class="card-action">
+                            <a href="#">Amérique du sud</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--preparer votre voyage-->
+        <h1 class="center">Préparer votre voyage </h1>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="image/avantv.jpg" id="imgcarte">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Avant-Voyage<i class="material-icons right">more_vert</i></span>
+                            <p>
+                                <a href="#"></a>
+                            </p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Avant le  voyage<i class="material-icons right">close</i></span>
+                            <p>Texte a ecrire avant le voyage</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="image/abord.jpg" id="imgcarte">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">A bord<i class="material-icons right">more_vert</i></span>
+                            <p>
+                                <a href="#"></a>
+                            </p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">A bord<i class="material-icons right">close</i></span>
+                            <p>texte a ecrire pou a bord.</p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="image/apresv.jpg" id="imgcarte">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Apres le voyage <i class="material-icons right">more_vert</i></span>
+                            <p>
+                                <a href="#"></a>
+                            </p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">A l'arrivée<i class="material-icons right">close</i></span>
+                            <p>texte a écrire a l'arrivé.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--footer-->
+
+
+            <script src="./js/jquery-3.4.1.min.js">
+            </script>
+            <!-- Compiled and minified JavaScript -->
+            <script src="./js/materialize.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $('.tabs').tabs();
+                    $('select').formSelect();
+                    $('input.autocomplete').autocomplete
+
+                });
+
+                
+            </script>
+            <script> function bloqueradulte(){
+    
+                if{(document.getElementById('adulte').value)==9{document.getElementById('adulte').disabled=true; }}}
+                    </script>
+            <script>
+                
+                    
+                function apparaitremulti() {
+                    var show = document.getElementById('Multidestination');
+                    show.style.display = "block";
+
+                }
+
+                function apparaitresimple() {
+                    var show = document.getElementById('allersimple');
+                    show.style.display = "block";
+
+                }
+
+                function cachersimple() {
+                    var cacher = document.getElementById('allersimple');
+                    cacher.style.display = "none";
+                }
+
+                function cachermulti() {
+                    var cacher = document.getElementById('Multidestination');
+                    cacher.style.display = "none";
+                }
+            </script>
+            <script>
+                80) {
+                    console.log("63px atteint");
+                    $('.menu').addClass('sticky');
+                    $('.menu').addClass('animate');
+                } else {
+                    $('.menu').removeClass('sticky');
+                    $('.menu').removeClass('animate');
+                }
+            </script>
+            <script>
+                (function($) {
+                    $(function() { // DOM ready
+
+                        //Si un lien a une liste déroulante, ajoutez un sous-menu toggle
+                        // If a link has a dropdown, add sub menu toggle.
+                        $('.nav ul li a:not(:only-child)').click(function(e) {
+                            $(this).siblings('.nav-dropdown').toggle();
+                            //Fermer un menu déroulant lors de la sélection d'un autre
+                            // Close one dropdown when selecting another
+                            $('.nav-dropdown').not($(this).siblings()).hide();
+                            e.stopPropagation();
+                        });
+                        //En cliquant en dehors du menu déroulant, la classe déroulante sera supprimée
+                        // Clicking away from dropdown will remove the dropdown class
+                        $('html').click(function() {
+                            $('.nav-dropdown').hide();
+                        });
+                        //Activer / désactiver les styles de navigation par clic
+                        // Toggle open and close nav styles on click
+                        $('#nav-toggle').click(function() {
+                            $('.nav ul').slideToggle();
+                        });
+                        //Hamburger to X bascule
+                        // Hamburger to X toggle
+                        $('#nav-toggle').on('click', function() {
+                            this.classList.toggle('active');
+                        });
+                    }); // end DOM ready
+                })(jQuery);
+            </script>
+        </div>
+</body>
+
+
+<footer>
+    <div class="incline">
+
+    </div>
+    <div class="ftr">
+
+
+        <div class="foot">
+            <h3>Service client :</h3>
+            <div class="attrib">
+                <p><a class=" " href="Remboursements.php" aria-hidden="true">Remboursements</a></p>
+                <p><a class=" " href="Réclamation.php" aria-hidden="true">Réclamations</a></p>
+                <p><a class=" " href="info-payements.php" aria-hidden="true">Info-payements</a></p>
+            </div>
+        </div>
+
+        <div class="foot">
+            <h3>A propos de nous :</h3>
+            <div class="attrib">
+                <p><a class=" " href="creation.php" aria-hidden="true">Creation de la company</a></p>
+                <p><a class=" " href="politique.php" aria-hidden="true">Notre politique</a></p>
+                <p><a class=" " href="equipe.php" aria-hidden="true">Notre equipe</a></p>
+                <p><a class=" " href="reglement.php" aria-hidden="true">Reglement</a></p>
+            </div>
+        </div>
+        <div class="foot">
+            <h3>Liens :</h3>
+            <div class="attrib">
+                <p><a class=" " href="Newsletter.php" aria-hidden="true">Newsletter</a></p>
+            </div>
+        </div>
+        <div class="foot">
+            <h3>Contactez-nous :</h3>
+            <div class="attrib">
+                <p>Position: bastos tiziouzou </p>
+                <p>Gmail:gmail@gmail.com</p>
+                <p>Tél :0666666666</p>
+            </div>
+
+            <div class="socialNavbar">
+                <ul class=" ">
+
+
+                    <li>
+                        <a href="https://www.facebook.com/" class="icon-facebook" title="Facebook">
+                            <span style="font-size: 1.5em;"><i class="fab fa-facebook-f"></i>
+                           </span></a>
+                    </li>
+                    <li>
+                        <a href="https://pinterest.com" class="icon-pinterest" title="Pinterest">
+                            <span style="font-size: 1.5em;"><i class="fab fa-pinterest-p"></i>
+                          </span></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/" class="icon-twitter" title="Twitter">
+                            <span style="font-size: 1.5em;"><i class="fab fa-twitter"></i>
+                           </span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/" class="icon-linkedin" title="LinkedIn">
+                            <span style="font-size: 1.5em;"><i class="fab fa-linkedin-in"></i>
+                          </span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="para">
+
+        <h4 class="text-dark">© <span id="copyright-year">2019</span> All Rights Reserved Terms of Use and <a class="text-dark" href="privacy.html">Privacy Policy</a></h4>
+
+
+
+    </div>
+</footer>
+
+</html>
