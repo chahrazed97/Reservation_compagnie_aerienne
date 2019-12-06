@@ -1,0 +1,340 @@
+.row{display: inline;margin: 20px;}
+#recherche{background-color: antiquewhite;}
+.page-footer{background-color:172646; }
+#imgcarte{height: 200}
+.milieu{background-image:url(../image/avion.jpg); padding-top: 90px;background-size: cover; opacity: 90%;padding-bottom: 90px;}
+.btn.submit{margin-top:30; }
+#date_retour{display: none;}
+.tab1{  background-color:rgba(31, 31, 33, 0.65) !important; }
+input-field{background-color: 172646;}
+p{color: black;}
+label{color: black!important;}
+ * {
+        font-family: "Montserrat", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+    }
+    
+    body {
+        overflow-y: auto;
+        height: 150%;
+        display: block;
+        margin: 0px;
+    }
+    
+    .logo {
+        background: linear-gradient(135deg, #3db7ef 0%, #3db7ef 25%, #fff 25%, #fff 100%);
+        width: 100%;
+        height: 110px;
+    }
+    
+    .menu {
+        background: linear-gradient(135deg, transparent 0, transparent 22.5%, #172646 22.5%, #172646 100%);
+        width: 100%;
+        height: 53px;
+        margin-top: -30px;
+    }
+    
+    .sticky {
+        position: fixed;
+        top: 30;
+    }
+    
+    .animate {
+        background: #172646;
+    }
+    
+    .navigation {
+        height: 53px;
+        padding-left: 20%;
+    }
+    
+    .brand {
+        position: absolute;
+        padding-left: 20px;
+        float: left;
+        line-height: 53px;
+        text-transform: uppercase;
+        font-size: 1.4em;
+    }
+    
+    .brand a,
+    .brand a:visited {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    
+    .nav-container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    nav {
+        box-shadow: 0px 0px;
+    }
+    
+    .nav {
+        background-color: transparent;
+        float: right;
+    }
+    
+    .nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav ul li {
+        float: left;
+        position: relative;
+    }
+    
+    .menubar {
+        margin: 0 2em;
+    }
+    
+    .nav ul li a,
+    .nav ul li a:visited {
+        display: block;
+        padding: 0 20px;
+        line-height: 53px;
+        background: #172646;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    
+    .nav ul li a:hover,
+    .nav ul li a:visited:hover {
+        background: #2581DC;
+        color: #ffffff;
+    }
+    
+    .nav ul li ul li {
+        min-width: 190px;
+    }
+    
+    .nav ul li ul li a {
+        padding: 15px;
+        line-height: 20px;
+    }
+    
+    .nav-dropdown {
+        position: absolute;
+        display: none;
+        z-index: 1;
+    }
+    /* Mobile navigation */
+    
+    .nav-mobile {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background: #172646;
+        height: 53px;
+        width: 53px;
+    }
+    
+    @media only screen and (max-width: 798px) {
+        .nav-mobile {
+            display: block;
+            top: -7px;
+            left: 0;
+        }
+        .logo {
+            display: none;
+        }
+        .menu {
+            margin-top: 0;
+            background: #172646;
+        }
+        .nav-list {
+            background-color: #172646;
+        }
+        .nav {
+            width: 100%;
+            padding: 53px 0 15px;
+        }
+        .nav ul {
+            display: none;
+        }
+        .nav ul li {
+            float: none;
+        }
+        .nav ul li a {
+            padding: 15px;
+            line-height: 20px;
+        }
+        .nav ul li ul li a {
+            padding-left: 30px;
+        }
+        .nav-dropdown {
+            position: static;
+        }
+    }
+    
+    @media screen and (min-width: 799px) {
+        .nav-list {
+            display: block !important;
+        }
+    }
+    
+    #nav-toggle {
+        position: absolute;
+        left: 18px;
+        top: 22px;
+        cursor: pointer;
+        padding: 10px 35px 16px 0px;
+    }
+    
+    #nav-toggle span,
+    #nav-toggle span:before,
+    #nav-toggle span:after {
+        cursor: pointer;
+        border-radius: 1px;
+        height: 5px;
+        width: 35px;
+        background: #ffffff;
+        position: absolute;
+        display: block;
+        content: '';
+        transition: all 300ms ease-in-out;
+    }
+    
+    #nav-toggle span:before {
+        top: -10px;
+    }
+    
+    #nav-toggle span:after {
+        bottom: -10px;
+    }
+    
+    #nav-toggle.active span {
+        background-color: transparent;
+    }
+    
+    #nav-toggle.active span:before,
+    #nav-toggle.active span:after {
+        top: 0;
+    }
+    
+    #nav-toggle.active span:before {
+        transform: rotate(45deg);
+    }
+    
+    #nav-toggle.active span:after {
+        transform: rotate(-45deg);
+    }
+    
+    article {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+.ftr {
+    display: flex;
+    width: 100%;
+}
+
+.foot {
+    display: block;
+    width: 100%;
+    margin-left: 1%;
+}
+
+footer {
+    width: 100%;
+    letter-spacing: 0.02em;
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    height: auto;
+    padding-top: 0px;
+    background-color: #172646;
+    padding-bottom: 0px;
+}
+
+footer p {
+    display: block;
+    color: #fff;
+}
+
+footer h3 {
+    padding-right: 20px;
+    color: #efd807;
+    font-size: 1.4em;
+    font-weight: bold;
+    font-family: "Montserrat";
+}
+
+footer a {
+    color: #fff;
+    font-size: 1.05em;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.para .text-dark {
+    color: #d6d6d6;
+    text-align: center;
+    font-weight: lighter;
+}
+
+h4 .text-dark:hover {
+    color: #efd807;
+}
+
+.attrib {
+    padding-left: 5%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    padding-left: 0%;
+}
+
+.icon-facebook:hover {
+    color: #3b5999;
+    padding-bottom: 5%;
+}
+
+.icon-pinterest:hover {
+    color: darkred;
+}
+
+.icon-twitter:hover {
+    color: deepskyblue;
+}
+
+.incline {
+    background: linear-gradient(135deg, #fff 0, #fff 58%, #172646 50%, #172646 100%);
+    width: 100%;
+    height: 30px;
+}
+
+@media only screen and (max-width: 720px) {
+    .ftr {
+        display: block;
+    }
+    body {
+        display: block;
+    }
+    footer {
+        text-align: center;
+    }
+    ul {
+        padding: 10%;
+    }
+    .attrib {
+        text-align: center;
+    }
+    h3 {
+        text-align: center;
+    }
+    footer h3 {
+        font-size: 1em;
+    }
+}
