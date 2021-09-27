@@ -1,0 +1,226 @@
+.slider {
+    width: 80%;
+    display: flex;
+    height: 100px;
+    margin:auto;
+    
+}
+
+
+.slider .items {
+    width: 100px;
+    height: auto;
+    background-color: #172646;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.slider .items p {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+.circle{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(rgb(51, 130, 204),#e6b12a);
+    border-radius: 50%;
+
+}
+.circle:after{
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    left: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    background-color: #03122ffa;
+    
+}
+.circle span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(rgb(51, 130, 204),#e6b12a);
+    border-radius:50%;
+}
+.circle span:nth-child(1){
+    filter:blur(5px);
+}
+.circle span:nth-child(2){
+    filter:blur(10px);
+}
+.circle span:nth-child(3){
+    filter:blur(20px);
+}
+
+.info {
+    height: auto;
+    width: 95%;
+    margin: 2%;
+    padding: 5px 10px;
+}
+
+.details_vol {
+    margin: 2%;
+    height: 600px;
+    width: 20%;
+    
+}
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: 1 !important;
+    color: #efd807 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.info1{
+    background-color: rgb(236, 232, 236);
+}
+
+.selecte {
+    display: block;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    background-color: rgb(245, 240, 240,0.57);
+}
+
+.selecte option {
+    color: black;
+}
+.btn, .btn:hover , .btn:active{
+    background-color: #172646;
+    border:3px solid #efd807;
+    color:white;
+}
+
+
+#tri,
+#filtre {
+    margin-right: 10px;
+    border-bottom: black 2px solid !important;
+}
+.items:visited{
+    background-color: #4c0d0d;
+}
+.items{
+    height:85px;
+}
+.item{
+    background-color:#2d2d2f;
+   padding:5px;
+}
+.collapsible-header, th{
+    font-weight: 600;
+    color: #172646;
+    font-size: 17px;
+    border:none;
+}
+.items:active,.items:visited,.items:focus{
+background: repeating-linear-gradient(gold,#172646,#172646,#172646, #172646,#172646,gold );
+}
+.items:active p{
+    color:gold;
+}
+.butn-tri{
+    width: 180px;
+    height: 43px;
+    border-radius: 11px;
+    background-color: white;
+    border: 2px solid #1726468c ;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+.butn-tri:focus,.butn-tri:hover{
+    background-color: #172646;
+    color: gold;
+}
+span.voldirect{
+    font-size: 14px;
+    font-weight: 600;
+    color: gold;
+}
+.info p{
+    margin-left: 20px;
+    color: white;
+}
+.prix a{
+    padding: inintial;
+}
+.prix{
+    background-color: #172646;
+    margin-left: 20px;
+}
+.tri-lab{
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+}
+.voir{
+    width: 100%;
+    background-color: #2d2d2f;
+    height: auto !important;
+    display: flex;
+}
+
+.details_vol{
+    height:auto !important;
+}
+.voir span{
+    background-color: #2d2d2f;background-color: #2d2d2f;    
+width: 20%;
+font-size: 25px;
+font-weight: 600;
+height: 100%;
+border: 2px solid inherit;
+    color: #ffd700;
+    text-align: center;
+}
+.voir p{
+    width: 100%;
+    height: 40px;
+    margin: 9px;
+    color: whitesmoke;
+    font-weight: 600;
+    margin: 8px;
+}
+.details_vol{
+    margin-top: 20px;
+}
+#myDIV li a{
+    color: black;
+}
+.list1{
+    background-color: #f2f2f2;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 1);
+}
+.list1 li{
+    text-align: center;
+    padding: 5px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 720px){
+    #myDIV{
+        padding: 0px;
+        width:100%;
+    }
+    .list1{
+        width:100%;
+    }
+    .list1 li{
+        text-align: left;
+    }
+
+}
+@media only screen and (min-width: 720px) and (max-width: 900px ){
+    .list1 li{
+        font-size:11px;
+    }
+}

@@ -1,0 +1,41 @@
+* {
+    font-family: " Montserrat", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.infobagagetitre {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #172646;
+}
+
+.collapsible-header:hover {
+    background-color: #172646;
+    color: #efd807;
+}
+
+.collapsible {
+    margin: 5%;
+}
+
+.collapsible-header {
+    background-color: rgba(23, 38, 70, 0.075);
+    margin: 2%;
+}
+
+@media only screen and (max-width: 720px) {
+    body {
+        display: block;
+    }
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    label {
+        margin: 0px;
+        padding: 0px;
+        font-size: 14px;
+    }
+}

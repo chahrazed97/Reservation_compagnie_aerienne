@@ -1,0 +1,147 @@
+* {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+.All {
+    height: 720px;
+    width: 720px;
+}
+
+.All {
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative
+}
+
+.All .content div {
+    float: left;
+    width: 50%
+}
+
+.All .content .sign-up {
+    padding: 0px 30px;
+}
+
+.All .content .sign-up h2 {
+    color: #e67e22;
+    font-size: 30px;
+    border-bottom: 3px solid #FFF;
+    display: inline-block;
+    padding: 6px 3px
+}
+
+.All .content .sign-up p {
+    color: #FFF;
+    font-size: 20px
+}
+
+.All .content .sign-up button {
+    background: none;
+    border: none;
+    padding: 20px;
+    background-color: #e67e22;
+    width: 200px;
+    font-size: 20px;
+    color: #FFF
+}
+
+.All .content .sign-in {
+    padding: 0px 30px;
+}
+
+.All .content .sign-in h2 {
+    color: #e67e22;
+    font-family: monospace;
+    font-size: 30px;
+    border-bottom: 3px solid #FFF;
+    display: inline-block;
+    padding: 6px 3px
+}
+
+.All .content .sign-in p {
+    color: #FFF;
+    font-size: 20px
+}
+
+.All .content .sign-in button {
+    background: none;
+    border: none;
+    padding: 20px;
+    background-color: #e67e22;
+    width: 200px;
+    font-size: 20px;
+    color: #FFF
+}
+
+.All .signover {
+    position: absolute;
+    background-color: #172646;
+    padding: 0px;
+    height: 654px;
+    width: 720px;
+}
+
+.All .signover input {
+    text-transform: uppercase;
+    margin-left: 4px;
+    margin-right: 4px;
+    display: block;
+    margin-bottom: 15px;
+    padding: 15px;
+    width: -webkit-fill-available;
+    background: none;
+    border: none;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 20px;
+    outline: none;
+}
+
+.All .signover .first h2,
+.All .signover .second h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 100px
+}
+
+.All .signover .second a {
+    text-decoration: none;
+}
+
+.All .signover input[type="submit"] {
+    font-weight: 700px;
+    width: -webkit-fill-available;
+    color: #172646;
+    background-color: #efd807;
+    margin-top: 20px
+}
+
+.form-styling {
+    color: #FFF;
+}
+
+.chap1 {
+    display: flex;
+}
+
+@media only screen and (max-width: 720px) {
+    .All .signover input {}
+    .chap1 {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .All .signover {
+        position: absolute;
+        background-color: #172646;
+        padding: 0px;
+        height: 480px;
+        width: 720px;
+    }
+}

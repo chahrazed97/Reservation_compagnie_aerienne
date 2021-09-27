@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+.ftr {
+    display: flex;
+    width: 100%;
+}
+
+.foot {
+    display: block;
+    width: 100%;
+    margin-left: 1%;
+}
+
+body {
+    display: block;
+    margin: 0px;
+}
+
+.footer-footer {
+    letter-spacing: 0.02em;
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    height: auto;
+    padding-top: 0px;
+    background-color: #172646;
+    padding-bottom: 0px;
+}
+
+.footer-footer p {
+    display: block;
+    color: #fff;
+}
+
+.footer-footer h3 {
+    margin-top: 0px;
+    padding-right: 20px;
+    color: #efd807;
+    font-size: 1.4em;
+    font-weight: bold;
+    font-family: "Montserrat";
+}
+
+.footer-footer a {
+    color: #fff;
+    font-size: 1.05em;
+    text-decoration: none;
+}
+
+.footer-footer a:hover {
+    text-decoration: underline;
+}
+
+.para .text-dark {
+    color: #d6d6d6;
+    text-align: center;
+    margin: 0px;
+    font-weight: lighter;
+}
+
+h4 .text-dark:hover {
+    color: #efd807;
+}
+
+.attrib {
+    padding-left: 5%;
+}
+
+.footericon {
+    list-style: none;
+    display: flex;
+    padding-left: 0%;
+}
+
+.footericon li {
+    margin: 3%;
+}
+
+.icon-facebook:hover {
+    color: #3b5999;
+    padding-bottom: 5%;
+}
+
+.icon-pinterest:hover {
+    color: darkred;
+}
+
+.icon-twitter:hover {
+    color: deepskyblue;
+}
+
+.incline-footer {
+    background: linear-gradient(135deg, transparent 0, transparent 58%, #172646 58%, #172646 100%);
+    width: 100%;
+    height: 30px;
+}
+
+.footer {
+    margin-top: 0px;
+    padding-top: 22px;
+}
+
+@media screen and (max-width: 720px) {
+    .ftr {
+        display: block;
+    }
+    .footer-footer {
+        text-align: center;
+    }
+    .footericon {
+        padding: 10%;
+    }
+    .attrib {
+        text-align: center;
+        padding-left: 0%;
+    }
+    .footer {
+        text-align: center;
+        margin-top: 0px;
+        padding-top: 22px;
+    }
+    .footer-footer h3 {
+        font-size: 1em;
+        margin-top: 0px;
+        margin-top: 0px;
+        padding-top: 22px;
+    }
+}

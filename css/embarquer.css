@@ -1,0 +1,55 @@
+                                                * {
+                                                    font-family: " Montserrat", Helvetica, Arial, sans-serif;
+                                                }
+                                                
+                                                body {
+                                                    text-align: center;
+                                                    width: 100%;
+                                                    background-color: #b1b5bb;
+                                                    text-align: center;
+                                                }
+                                                
+                                                .tab1 {
+                                                    width: 80%;
+                                                }
+                                                
+                                                #carte_emb {
+                                                    margin: auto;
+                                                    margin-top: 6%;
+                                                }
+                                                
+                                                td {
+                                                    padding: 0%;
+                                                }
+                                                
+                                                #compagnie {
+                                                    width: 80%;
+                                                }
+                                                
+                                                #passager {
+                                                    width: 20%;
+                                                }
+                                                
+                                                #codeqr {
+                                                    background-color: white;
+                                                    width: 20%;
+                                                }
+                                                
+                                                .info_form_label {
+                                                    margin: 0%;
+                                                }
+                                                
+                                                .embarquer_form {
+                                                    background-color: white;
+                                                }
+                                                
+                                                #buttonImprimer {
+                                                    padding: 1%;
+                                                    color: white;
+                                                    font-weight: normal;
+                                                    font-size: 20PX;
+                                                    background-color: #172646;
+                                                    border: #172646;
+                                                    margin-top: 1%;
+                                                    text-align: center;
+                                                }

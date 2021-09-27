@@ -1,0 +1,104 @@
+.table-info {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table-info td {
+    border: 2px solid black !important;
+}
+
+#bt {
+     background-color: #172646 !important;
+    
+}
+
+#page-courante {
+    color: #edf807;
+}
+
+
+
+#bouton:hover {
+    color: gold;
+}
+
+#bouton {
+    margin: 10px;
+    background-color: #172646;
+}
+
+.itemem {
+    text-align: center;
+    align-items: center;
+    width: 25%;
+}
+
+label {
+    color: #172646!important;
+}
+
+.flexen p:hover {
+    cursor: pointer;
+    color: gold;
+}
+
+.navbaren {
+    background-color: #172646;
+    display: flex;
+    margin-left: 0%;
+    height: 60px;
+    margin-top: 5%;
+}
+
+.btn-floating.btn-large {
+    width: 45px;
+    height: 45px;
+    padding: 0px;
+    background-color: gold !important;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.flexen {
+    display: flex;
+}
+
+.flexen p {
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+ .flexen span {
+    color: black;
+}
+
+* {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+
+@media screen and (max-width: 640px) {
+    
+    th {
+        font-size: 12px;
+    }
+    p {
+        margin: 0px;
+        padding: 0px;
+        font-size: 12px;
+    }
+    .btn-floating.btn-large {
+        display: none;
+    }
+}
+
+.material-icons:hover {
+    color: black;
+}
+
+span:hover {
+    color: black;
+}

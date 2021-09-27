@@ -1,0 +1,96 @@
+* {
+    font-family: " Montserrat", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.preparervoyagetitre {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #172646;
+}
+
+.collapsible-header:hover {
+    background-color: #172646;
+    color: gold;
+}
+
+.collapsible {
+    margin: 5%;
+}
+
+.collapsible-header {
+    background-color: rgba(23, 38, 70, 0.075);
+    margin: 2%;
+}
+
+.ecriture {
+    font-family: " Montserrat", Helvetica, Arial, sans-serif;
+    padding: 0 18px;
+    margin-left: 6%;
+    margin-right: 6%;
+    background-color: #f1f1f1;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+#imgcarte {
+    height: 200px;
+}
+
+.voyageicon {
+    list-style: none;
+    display: flex;
+    padding-left: 0%;
+    float: right;
+    padding-right: 10%;
+}
+
+.voyageicon li {
+    margin: 5%;
+}
+
+.icon-facebook {
+    color: #172646;
+}
+
+.icon-pinterest {
+    color: #172646;
+}
+
+.icon-twitter {
+    color: #172646;
+}
+
+.icon-linkedin {
+    color: #172646;
+}
+
+.icon-facebook:hover {
+    color: #3b5999;
+    padding-bottom: 5%;
+}
+
+.icon-pinterest:hover {
+    color: darkred;
+}
+
+.icon-twitter:hover {
+    color: deepskyblue;
+}
+
+@media only screen and (max-width: 720px) {
+    body {
+        display: block;
+    }
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    label {
+        margin: 0px;
+        padding: 0px;
+        font-size: 14px;
+    }
+}

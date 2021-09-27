@@ -1,0 +1,114 @@
+* {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
+
+body {
+    width: 100%;
+}
+
+.corp-tab-3 {
+    border: 2px solid;
+    border-color: #172646;
+}
+
+.corp-tab-2 {
+    border: 2px solid;
+    border-color: #172646;
+}
+
+.tab-2 {
+    width: 92%;
+    margin: 4%;
+}
+
+.tab-3 {
+    width: 92%;
+    margin: 4%;
+}
+
+.td-tab-2 {
+    border-right: double;
+}
+
+.row-glb {
+    display: flex;
+    border: 2px solid;
+    border-color: #172646;
+    margin: 4%;
+    width: 92%;
+}
+
+.col-res p {
+    padding: 5px;
+}
+
+.row-numres,
+.row-attente {
+    margin-bottom: 0px;
+}
+
+.lesbtn {
+    display: flex;
+    margin-left: 4%;
+}
+
+.btn-gerer {
+    background-color: #172646;
+    color: goldenrod;
+    margin: 1%;
+    letter-spacing: 0px;
+    line-height: 18px;
+}
+
+.btn-gerer:hover {
+    background-color: goldenrod;
+    color: #172646;
+}
+
+.drop {
+    display: none;
+    border: 1px solid #172646;
+    width: 335px;
+}
+
+.lng-sep {
+    width: 100%;
+    height: 1.2px;
+    background-color: black;
+}
+
+@media only screen and (min-width: 1200px) {
+    .tab-2 {
+        font-size: 22px;
+    }
+    .tab-3 {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .tab-2 {
+        font-size: 10.5px;
+        width: 98%;
+        margin: 1%;
+    }
+    .tab-3 {
+        font-size: 11px;
+        width: 98%;
+        margin: 1%;
+    }
+    .lesbtn {
+        display: block;
+        width: 350px;
+        margin: 0;
+        box-sizing: content-box;
+    }
+    .btn-gerer {
+        width: 245px;
+    }
+    .row-glb {
+        font-size: 11px;
+        width: 98%;
+        margin: 1%;
+    }
+}
